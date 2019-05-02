@@ -20,21 +20,27 @@ edad =  input("Ingrese su edad: ")
 edad = int(edad)
 
 
-precio = int(precio)
-seguro = int(seguro)
 
-
-if modalidad == 1:
+if (modalidad == 1):
 	precio = 1200 * 10
 else:
 	precio = 1200 * 8
 
-if edad <= 20 and modadlidad ==1:
+
+if (edad <= 20) and (modalidad == 1):
 	seguro = 100 * 10
-if edad >20 and modalidad == 2:
- 	seguro = 150 * 8
+else:
+	if(edad >20) and (modalidad == 1):
+		seguro = 150 * 10
 
-preciofinal = float(costo + seguro)
+if (edad <= 20) and (modalidad == 2):
+	seguro = 100 * 8
+else:
+	if(edad >20) and (modalidad == 2):
+		seguro = 150*8
 
-print("El precio a final a pagar es de: %.2f" % preciofinal)		
+
+preciofinal = int((precio + seguro))
+
+print("El precio a final a pagar es de: %d$" % preciofinal)		
 
